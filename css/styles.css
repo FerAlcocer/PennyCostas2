@@ -1,0 +1,90 @@
+:root {
+  --clr-text: #3d3d3d;
+  --clr-primary: white;
+  --clr-secondary: #f0f0f0;
+
+  --ff-title: "Lora", serif;
+  --ff-text: "Crimson Pro", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* CONFIG GENERAL */
+
+html {
+  box-sizing: border-box;
+  font-family: var(--ff-title);
+  color: var(--clr-text);
+  font-size: 1.125rem;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  padding: 3em 1em;
+}
+
+/* TIPOGRAFIA */
+nav a {
+  text-decoration: none;
+  color: var(--clr-text);
+}
+/* NAVEGACION */
+
+header {
+  display: block;
+  padding: 1em 0 2em;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--clr-text);
+  display: block;
+  padding: 1.25rem 1.563rem;
+}
+
+nav a:hover {
+  color: var(--clr-primary);
+  background: var(--clr-text);
+}
+/* BOTONES */
+/* ESTILO DE LA PAGINA */
+
+header {
+  background-color: var(--clr-primary);
+}
+
+.carrusel {
+  background-attachment: fixed;
+  background-color: var(--clr-text);
+  background-image: url(../css/Imagenes/cabeza.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: var(--clr-primary);
+}
+
+.logo {
+  margin-left: 0;
+}
+/* MEDIA QUERYS */
