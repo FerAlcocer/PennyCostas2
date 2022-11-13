@@ -1,7 +1,7 @@
 :root {
   --clr-text: #3d3d3d;
   --clr-primary: white;
-  --clr-secondary: #f0f0f0;
+  --clr-secondary: #eeeeee;
 
   --ff-title: "Lora", serif;
   --ff-text: "Crimson Pro", serif;
@@ -71,11 +71,6 @@ nav a {
   padding: 1.25rem 0rem;
 }
 
-nav a:hover {
-  color: var(--clr-text);
-  background: var(--clr-primary);
-}
-
 .logo {
   font-size: 1.7rem;
   cursor: pointer;
@@ -84,22 +79,6 @@ nav a:hover {
 
 .btn__desplegable {
   cursor: pointer;
-}
-
-.barra__submenu {
-  color: var(--clr-primary);
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  margin-right: 20px;
-  left: 0;
-  top: 60px;
-  width: 100%;
-
-  height: calc(100% - 75px);
-  overflow-y: auto;
-
-  left: 100%;
 }
 
 .a__logo {
@@ -131,10 +110,32 @@ nav a:hover {
   width: 50%;
 }
 
-.barra-desplegable:hover .barra__submenu {
+.barra__submenu {
   display: block;
   background-color: var(--clr-text);
-  color: var(--clr-primary);
+  color: var(--clr-secondary);
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  margin-right: 20px;
+  left: 0;
+  top: 60px;
+  width: 100%;
+
+  height: calc(100% - 60px);
+  overflow: scroll;
+
+  left: 100%;
+  transition: left 0.3s;
+}
+
+.barra__submenu__visible {
+  left: 0;
+}
+
+.barra__submenu a:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-text);
 }
 .desktop {
   display: none;
@@ -193,7 +194,6 @@ header {
   }
 
   .desktop {
-    border: 2px solid red;
     display: flex;
     height: 75px;
     align-items: baseline;
@@ -202,7 +202,6 @@ header {
     width: 18rem;
   }
   .desktop__primary {
-    border: 2px solid blue;
     display: flex;
     width: 45rem;
     margin-left: 15rem;
