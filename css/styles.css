@@ -33,9 +33,13 @@ img {
   max-width: 100%;
 }
 
-section {
-  padding: 3em 1em;
+nav {
+  position: relative;
 }
+
+/* section {
+  padding: 3em 2em;
+} */
 
 /* TIPOGRAFIA */
 nav a {
@@ -47,7 +51,10 @@ nav a {
 
 header {
   display: flex;
+  position: relative;
   justify-content: space-between;
+  width: 100%;
+  top: 0;
 }
 
 nav {
@@ -86,13 +93,17 @@ nav a {
 }
 .a__logo:hover {
   color: var(--clr-text);
-  background: var(--clr-primary);
+  background: var(--clr-secondary);
 }
 .mobile {
   /* border: 2px solid red; */
   display: flex;
+  position: fixed;
+  top: 0;
   flex-direction: row;
+  background-color: var(--clr-secondary);
   width: 100%;
+  transition: all 300ms ease-in-out;
   justify-content: space-between;
   align-items: baseline;
   padding: 1em 0;
@@ -103,6 +114,7 @@ nav a {
   min-width: 250px;
   /* text-align: start; */
   /* margin-left: 0.5em; */
+  /* position: fixed; */
 }
 
 .barra-desplegable {
@@ -119,7 +131,7 @@ nav a {
   position: fixed;
   margin-right: 20px;
   left: 0;
-  top: 60px;
+  top: 75px;
   width: 100%;
 
   height: calc(100% - 60px);
@@ -129,6 +141,10 @@ nav a {
   transition: left 0.3s;
 }
 
+.subMenu__activo {
+  overflow: hidden;
+}
+
 .barra__submenu__visible {
   left: 0;
 }
@@ -136,6 +152,7 @@ nav a {
 .barra__submenu a:hover {
   background-color: var(--clr-secondary);
   color: var(--clr-text);
+  transition: all 0.5s ease;
 }
 .desktop {
   display: none;
@@ -149,8 +166,6 @@ nav a {
 
 /* BOTONES */
 .boton {
-  /* border: 2px solid blue; */
-  /* border: 2px solid blue; */
   display: flex;
   margin-right: 0;
   justify-content: flex-end;
@@ -168,6 +183,16 @@ nav a {
   margin-bottom: 0px;
   text-align: end;
 }
+
+.movil-carrusel a {
+  border: 2px solid black;
+}
+.movil-carrusel a:hover {
+  color: black;
+  transition: all 0.5s ease;
+  background-color: white;
+  border: 2px solid black;
+}
 /* ESTILO DE LA PAGINA */
 
 header {
@@ -175,12 +200,66 @@ header {
 }
 
 .carrusel {
+  /* position: relative; */
+  justify-content: space-between;
   background-attachment: fixed;
-  background-color: var(--clr-text);
+  background-color: #837878;
   background-image: url(../css/Imagenes/cabeza.jpg);
   background-blend-mode: multiply;
   background-size: cover;
   color: var(--clr-primary);
+  padding: 1rem;
+  min-width: 300px;
+  height: 300px;
+  margin-top: 70px;
+  margin-bottom: 2rem;
+}
+
+.movil-carrusel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+.movil-carrusel p {
+  margin-top: 2em;
+  font-size: 1.3rem;
+}
+/* .movil-carrusel h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.2rem;
+} */
+.movil-carrusel .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: black;
+  color: var(--clr-primary);
+  width: 200px;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+.desktop-carrusel {
+  display: none;
+}
+
+/* Scroll Stuff */
+
+.scroll-down .scroll {
+  transform: translate3d(0, -100%, 0);
+  transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.scroll-up .scroll {
+  filter: drop-shadow(0, -10px 20px rgb(170, 170, 170));
 }
 
 /* MEDIA QUERYS */

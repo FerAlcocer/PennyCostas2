@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  border: 2px dashed blue;
+  width: 500px;
+  height: 400px;
+  margin: 5em auto;
+}
+
+.movil-carrusel {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  height: 100%;
+  position: relative;
+}
+
+.movil-carrusel p {
+  align-items: center;
+  margin-top: 2em;
+}
+.boton {
+  display: flex;
+  border: 2px solid red;
+  position: relative;
+  width: 200px;
+  height: 60px;
+
+  text-align: center;
+  padding: 1em 2em;
+  color: black;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.desktop-carrusel {
+  display: none;
+}
