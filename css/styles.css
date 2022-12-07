@@ -303,6 +303,7 @@ a .btn-desktop:hover {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   background-color: black;
   color: var(--clr-primary);
@@ -589,8 +590,10 @@ footer .logo {
     /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
-    padding: 0 2rem 1rem;
+    /* padding: 0 2rem 1rem; */
+    padding: 1rem;
     overflow: hidden;
+    height: 40rem;
   }
   .contenedor .foto {
     display: block;
@@ -601,17 +604,21 @@ footer .logo {
     left: -2rem;
     width: 30rem;
     height: 51.5rem;
-    clip-path: inset(10% 9% 25% 0);
+    clip-path: inset(10% 9% 12% 0);
   }
 
   .contenedor_autor_texto {
     display: flex;
     position: relative;
     flex: row;
-    justify-content: space-between;
+    /* justify-content: space-around; */
+    justify-content: flex-start;
+    top: 0;
+    margin: 0;
+    gap: 3rem;
   }
   .autor p {
-    padding: 0 1em;
+    padding: 0;
   }
 
   .autor .contenedor > * {
