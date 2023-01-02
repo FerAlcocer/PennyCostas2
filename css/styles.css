@@ -338,8 +338,9 @@ a .btn-desktop:hover {
   margin: 10px 0;
 }
 
-.a_formasDePago {
+.garantia .a_formasDePago {
   text-decoration: none;
+  color: var(--clr-text);
 }
 
 .img__centrar {
@@ -364,6 +365,32 @@ a .btn-desktop:hover {
   justify-content: space-evenly;
   padding: 2rem 0;
   gap: 1rem;
+}
+
+.modal-container .active {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+
+.modal-container img {
+  z-index: 1;
+}
+
+.modal-container .active::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0, 70);
+  z-index: 0;
 }
 .obra .hot {
   position: absolute;
